@@ -21,7 +21,8 @@ const ComparisonTable = (props) => {
           [{ nativeEvent: { contentOffset: { y: scrollY } } }],
           // In android, useNativeDriver will trigger a strange error:
           // Error while updating 'transform' of a view managed by: RCTView
-          Platform.OS == 'ios' && {
+//           Platform.OS == 'ios' && 
+          {
             useNativeDriver: true
           }
         )}
@@ -31,7 +32,8 @@ const ComparisonTable = (props) => {
             horizontal
             onScroll={Animated.event(
               [{ nativeEvent: { contentOffset: { x: innerScrollX } } }],
-              Platform.OS == 'ios' && {
+//               Platform.OS == 'ios' && 
+              {
                 useNativeDriver: true
               }
             )}
